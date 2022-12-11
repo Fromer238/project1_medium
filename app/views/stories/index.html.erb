@@ -1,0 +1,14 @@
+<h1 class="title">故事列表</h1>
+
+
+<% @stories.each do |story| %>
+  <h2 class="title"><%= story.title %></h2>
+  <div class="content">
+    <p><%= story.content %></p>
+    <p>最後編輯時間 <%= time_ago_in_words(story.updated_at) %>
+      <%= link_to "編輯", edit_story_path(story), class: 'button is-text is-small' %>
+      <%= link_to "刪除", story, class: 'button is-danger is-small', method: 'delete' %>
+    </p>
+  </div>
+  <hr>
+<% end %>
