@@ -8,7 +8,7 @@
     <%= f.text_area :content, class: 'textarea is-primary is-medium' %>
   </div>
   <div class="field">
-    <%= f.submit '儲存草稿', class: 'button is-medium' %>
-    <%= f.submit '發布文章', class: 'button is-medium is-primary' %>
+    <%= f.submit '儲存草稿', name='save_as_draft', class: 'button is-medium' %>
+    <%= f.submit '發布文章', name='publish', class: 'button is-medium is-primary' %>
   </div>
 <% end %>
